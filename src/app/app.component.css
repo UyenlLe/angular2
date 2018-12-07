@@ -1,0 +1,41 @@
+/* Application-wide Styles */
+h1 {
+  color: #369;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 250%;
+}
+h2,
+h3 {
+  color: #444;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+}
+body {
+  margin: 2em;
+}
+body,
+input[type="text"],
+button {
+  color: #888;
+  font-family: Cambria, Georgia;
+}
+/* everywhere else */
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+  display: flex;
+  flex: row wrap;
+  background: #369;
+  justify-content: flex-start;
+}
+a:link,
+a:visited {
+  color: white;
+  text-decoration: none;
+  padding: 1em;
+}
+a:hover {
+  color: yellow;
+  text-decoration: underline;
+}
