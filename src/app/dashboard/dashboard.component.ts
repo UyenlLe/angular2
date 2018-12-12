@@ -9,6 +9,7 @@ import { HeroService } from "../hero.service";
 })
 export class DashboardComponent implements OnInit {
   heroes: Hero[] = [];
+  value = "";
   constructor(private heroService: HeroService) {}
 
   ngOnInit() {
@@ -18,5 +19,16 @@ export class DashboardComponent implements OnInit {
     this.heroService
       .getHeroes()
       .subscribe(heroes => (this.heroes = heroes.slice(0, 8)));
+  }
+
+  onKey(value: string) {
+    this.value += (<HTMLInputElement>event.target).value + " | ";
+  }
+
+  onKeyEnter(value: string) {
+    this.value = value;
+  }
+  update(value: string) {
+    this.value = value;
   }
 }

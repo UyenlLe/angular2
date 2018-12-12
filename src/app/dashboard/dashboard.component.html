@@ -10,3 +10,8 @@
     </div>
   </a>
 </div>
+<input #box2 (keyup.enter)="onKeyEnter(box2.value)" />
+<p>{{ value }}</p>
+<input #box (keyup.enter)="update(box.value)" (blur)="update(box.value)" />
+<p>{{ value }}</p>
+<app-hero-search></app-hero-search>
